@@ -1,1 +1,44 @@
-
+:root{
+  --bg:#071024;
+  --card:#0b1624;
+  --muted:#93a3b3;
+  --accent:#2ea6ff;
+  --text:#e7f0fb;
+  --radius:12px;
+  --container:1000px;
+  --glass: rgba(255,255,255,0.03);
+}
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family:Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background:linear-gradient(180deg,var(--bg),#020617);
+  color:var(--text);
+  -webkit-font-smoothing:antialiased;
+}
+.site-header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:18px 22px;
+  background:linear-gradient(90deg, rgba(255,255,255,0.02), transparent);
+  border-bottom:1px solid rgba(255,255,255,0.03);
+}
+.brand h1{margin:0;font-size:1.1rem}
+.brand .subtitle{margin:2px 0 0;color:var(--muted);font-size:0.85rem}
+.nav a{color:var(--muted);margin-left:14px;text-decoration:none}
+.container{max-width:var(--container);margin:28px auto;padding:0 16px}
+.card{background:var(--card);padding:16px;border-radius:var(--radius);box-shadow:0 6px 18px rgba(0,0,0,0.45);margin-bottom:16px}
+.hero{padding:32px}
+.row{display:grid;grid-template-columns:1fr 320px;gap:12px}
+.about p{margin:0}
+.links{padding-left:1rem}
+.links a{color:var(--accent);text-decoration:none}
+#events-list .event{padding:10px;border-radius:10px;background:var(--glass);margin-bottom:8px}
+#next-event .muted{color:var(--muted);font-size:0.9rem}
+.site-footer{padding:18px;text-align:center;color:var(--muted);font-size:0.9rem}
+@media(max-width:820px){
+  .row{grid-template-columns:1fr}
+  .site-header{flex-direction:column;align-items:flex-start;gap:8px}
+  .nav a{margin-left:8px}
+}
